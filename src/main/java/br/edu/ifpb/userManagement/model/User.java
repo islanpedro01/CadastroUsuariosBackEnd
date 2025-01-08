@@ -22,6 +22,8 @@ public class User {
     private String id;
     @NotBlank(message = "Nome é obrigatório")
     private String nome;
+    @NotBlank(message = "Orcid é obrigatório")
+    private String orcid;
     @NotBlank(message = "Telefone é obrigatório")
     private String telefone;
     @Email(message = "Email deve ser válido")

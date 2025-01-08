@@ -28,9 +28,20 @@ public class UserService {
         return userRepository.findAll();
     }
 
+    public User buscarPorEmail(String email){
+        return userRepository.findByEmail(email);
+    }
+
+    public User buscarPorOrcid(String email){
+        return userRepository.findByOrcid(email);
+    }   
+    
     public void excluir(String id){
         userRepository.deleteById(id);
 
     }
 
+    public User atualizar(User usuario){
+        return userRepository.save(usuario);
+    }
 }
