@@ -43,7 +43,7 @@ public class UserController {
     return ResponseEntity.ok(user);
     }
 
-    @GetMapping("/{orcid}")
+    @GetMapping("/orcid/{orcid}")
     public ResponseEntity<User> buscarPorOrcid(@PathVariable String orcid) {
     User user = userService.buscarPorEmail(orcid);
     if (user == null) {
